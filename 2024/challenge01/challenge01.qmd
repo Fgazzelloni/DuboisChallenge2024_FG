@@ -7,9 +7,10 @@ image-alt: ''
 description: ''
 output: html_document
 execute: 
-   eval: false
+   eval: true
    message: false
    warning: false
+   cache: true
 ---
 
 ## Overview
@@ -21,7 +22,7 @@ execute:
 :::
 
 ::: {.column width="50%"}
-![](test2.png)
+![](challenge01.png)
 :::
 :::
 
@@ -36,6 +37,7 @@ library(patchwork)
 
 ## Data ready from the GitHub Repo
 
+Download the `georgia-1880-county-shapefile.zip` file from: [https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024/challenge01](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024/challenge01)
 ```{r}
 georgia_shp <- sf::read_sf("data/georgia-1880-county-shapefile")
 
@@ -193,7 +195,7 @@ pop80_map
 
 ### Plot layout
 
-source: https://ggplot2-book.org/arranging-plots
+source: [https://ggplot2-book.org/arranging-plots](https://ggplot2-book.org/arranging-plots)
 
 ```{r}
 pop70_map+ ggplot() + ggplot()+ pop80_map + plot_layout(ncol = 2,nrow = 2)
@@ -266,9 +268,11 @@ legend2_plot
 ```{r}
 pop70_map+ legend2_plot + legend1_plot+ pop80_map + plot_layout(ncol = 2,nrow = 2)+plot_annotation(
   title = "NEGRO POPULATION OF GEORGIA BY COUNTIES.",
+  caption="#DuboisChallenge24| Week1 | by Federica Gazzelloni",
   theme = theme_void(base_family = "Public Sans"))&
   theme(text=element_text(color="#483c32",face="bold"),
         plot.title = element_text(hjust=0.5),
+        plot.caption = element_text(size=9),
         plot.background = element_rect(color="#e7d6c5",fill="#e7d6c5"),
         panel.background = element_rect(color="#e7d6c5",fill="#e7d6c5"))
 ```
