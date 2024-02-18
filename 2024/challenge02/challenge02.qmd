@@ -286,28 +286,32 @@ ch2_2%>%
                          ymin=pmax(log(Free), -1),
                          ymax=pmax(log(Free), 5)), 
              fill='black')+
-    geom_ribbon(mapping=aes(x=Year,y=log(Free),
-                         ymin=pmin(log(Free), -1),
-                         ymax=pmin(log(Free), 5)), 
-             fill='#b5102d')+
-    geom_line(aes(x=Year,y=log(Free)),
-              linewidth=0.1,
-              color="#dbc8b4")+
-    geom_vline(aes(xintercept=Year),
-             color="#dbc8b4",
-             linewidth=0.3)+
+  geom_ribbon(mapping=aes(x=Year,y=log(Free),
+                       ymin=pmin(log(Free), -1),
+                       ymax=pmin(log(Free), 5)), 
+           fill='#b5102d')+
+  geom_line(aes(x=Year,y=log(Free)),
+            linewidth=0.1,
+            color="#dbc8b4")+
+  geom_vline(aes(xintercept=Year),
+           color="#dbc8b4",
+           linewidth=0.3)+
   geom_ribbon(data=d2,mapping=aes(x=x,y=y,
                    ymin=pmax(y, -1),
                    ymax=pmax(y, 5)), 
               fill='#dbc8b4')+
-  #geom_line(data=d2,aes(x=x,y=y),color="black")+
-  geom_line(data=d2%>%filter(x>=1 & x <= 9),aes(x=x,y=y),color="black")+
-    geom_point(data=d2%>%filter(x>=1 & x <= 9),aes(x=x,y=y),color="black",size=0.1)+
+  geom_point(data=d2%>%filter(x>=1 & x <= 9),
+             aes(x=x,y=y),
+             color="black",
+             shape=".")+
+  geom_line(data=d2%>%filter(x>=1 & x <= 9),
+          aes(x=x,y=y),
+          color="black",linewidth=0.2)+
   # adjust scales to a reverse position
   scale_y_reverse(position = "right",
                   breaks = 0:2,
              #expand = expansion(add=0),
-    labels = paste0(c("1%", "2%", "3%"), ""))+
+  labels = paste0(c("1%", "2%", "3%"), ""))+
   scale_x_reverse(name = "First Axis",
                   position = "top",
                   breaks = 1:9,
@@ -317,7 +321,7 @@ ch2_2%>%
                                       name="Second Axis",
                                       breaks = 1:9,
                                       labels =years))+
-  coord_flip(xlim = c(9,1),ylim = c(2.1,-0.8),
+  coord_flip(xlim = c(9.5,0.5),ylim = c(2.1,-0.8),
              clip = "off")+
   annotate("text", x = 0.55, y = -1.38,
        label = "PERCENT\nOF\nFREE NEGROES",
@@ -348,18 +352,18 @@ ch2_2%>%
 ```
 ```{r}
 ggsave("test_approx.png",bg="#dbc8b4",
-       width = 4.2,height = 6)
+       width = 4,height = 6)
 ```
 
 
 ```{r}
 ggdraw()+
-  draw_image("test_approx.png")
+  draw_image("test_approx.png",scale = 0.8)
 ```
 
 
 ```{r}
-ggsave("challenge2.png",bg="#dbc8b4",
-       width = 5,height = 6)
+ggsave("challenge02.png",bg="#dbc8b4",
+       width = 4.5,height = 6)
 ```
 
