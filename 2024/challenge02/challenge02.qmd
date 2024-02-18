@@ -24,7 +24,7 @@ Slave and Free Negroes (plate 12), February 12
 ![](https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/2024/challenge02/original-plate-12.jpg)
 :::
 ::: {.column width="50%"}
-![]()
+![](https://raw.githubusercontent.com/Fgazzelloni/DuboisChallenge2024_FG/main/2024/challenge02/challenge02.png)
 :::
 
 :::
