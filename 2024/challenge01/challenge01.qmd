@@ -7,13 +7,17 @@ image-alt: ''
 description: ''
 output: html_document
 execute: 
-   eval: true
+   eval: false
    message: false
    warning: false
    cache: true
 ---
 
 ## Overview
+
+Negro Population of Georgia by Counties, 1870, 1880 (plate 06), February 5
+
+
 
 :::: {.columns}
 
