@@ -1,5 +1,5 @@
 ---
-title: 'Challenge 01'
+title: 'Challenge 02'
 subtitle: 'Welcome to the #DuboisChallenge2024 week 2'
 date: '2024-02-12'
 image: 'https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/2024/challenge02/original-plate-12.jpg'
