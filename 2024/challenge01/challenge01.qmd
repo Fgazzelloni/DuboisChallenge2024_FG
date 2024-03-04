@@ -17,10 +17,7 @@ execute:
 
 Negro Population of Georgia by Counties, 1870, 1880 (plate 06), February 5
 
-
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 ![](https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/2024/challenge01/original-plate-06.jpg)
 :::
@@ -38,10 +35,10 @@ library(sf)
 library(patchwork)
 ```
 
-
 ## Data ready from the GitHub Repo
 
-Download the `georgia-1880-county-shapefile.zip` file from: [https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024/challenge01](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024/challenge01)
+Download the `georgia-1880-county-shapefile.zip` file from: <https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2024/challenge01>
+
 ```{r}
 georgia_shp <- sf::read_sf("data/georgia-1880-county-shapefile")
 
@@ -199,7 +196,7 @@ pop80_map
 
 ### Plot layout
 
-source: [https://ggplot2-book.org/arranging-plots](https://ggplot2-book.org/arranging-plots)
+source: <https://ggplot2-book.org/arranging-plots>
 
 ```{r}
 pop70_map+ ggplot() + ggplot()+ pop80_map + plot_layout(ncol = 2,nrow = 2)
